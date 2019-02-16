@@ -11,12 +11,6 @@ module.exports = async ({ graphql, actions }) => {
     const { createRedirect } = actions
     const queryPromises = []
 
-    createRedirect({
-        fromPath: `/api/admin/`,
-        isPermanent: true,
-        redirectInBrowser: true,
-        toPath: `https://api.ghost.org`,
-    })
     // The /concepts page doesn't exist, we need to redirect to
     // the first post of this section
     createRedirect({
